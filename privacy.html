@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vendo · Privacy Policy</title>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    body {
+      background-color: #fafaf8;
+      color: #1e1e1e;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ----- navbar (same as home & terms) ----- */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      border-bottom: 1px solid #eaeaea;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #0b2b26;
+    }
+    .logo i {
+      color: #2b7a6e;
+      margin-right: 6px;
+    }
+    .logo span {
+      color: #2b7a6e;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      font-weight: 500;
+      color: #2d2d2d;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: inherit;
+      font-size: 16px;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover {
+      color: #2b7a6e;
+    }
+
+    .nav-icons {
+      display: flex;
+      gap: 20px;
+      font-size: 20px;
+      color: #2d2d2d;
+    }
+    .nav-icons i {
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+    .nav-icons i:hover {
+      color: #2b7a6e;
+    }
+
+    /* ----- privacy header ----- */
+    .privacy-header {
+      margin: 48px 0 32px 0;
+    }
+    .privacy-header h1 {
+      font-size: 40px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      color: #0b2b26;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .privacy-header h1 i {
+      color: #2b7a6e;
+      font-size: 38px;
+    }
+    .privacy-header p {
+      font-size: 18px;
+      color: #4e625b;
+      margin-top: 8px;
+      max-width: 700px;
+    }
+
+    .privacy-divider {
+      width: 80px;
+      height: 4px;
+      background: #2b7a6e;
+      border-radius: 4px;
+      margin: 16px 0 24px 0;
+    }
+
+    /* ----- privacy grid (cards) ----- */
+    .privacy-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      margin: 24px 0 56px 0;
+    }
+
+    .privacy-card {
+      background: white;
+      border-radius: 24px;
+      padding: 28px 32px;
+      border: 1px solid #f0efec;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+      transition: all 0.2s;
+    }
+    .privacy-card:hover {
+      border-color: #d0ddd8;
+      box-shadow: 0 12px 28px -12px rgba(0, 0, 0, 0.06);
+    }
+
+    .privacy-card h2 {
+      font-size: 22px;
+      font-weight: 600;
+      color: #0b2b26;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .privacy-card h2 i {
+      color: #2b7a6e;
+      font-size: 24px;
+      width: 32px;
+      text-align: center;
+    }
+
+    .privacy-card p, .privacy-card li {
+      color: #3b4f48;
+      line-height: 1.7;
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    .privacy-card ul {
+      padding-left: 28px;
+      margin-top: 8px;
+    }
+    .privacy-card ul li {
+      margin-bottom: 6px;
+    }
+
+    .privacy-card strong {
+      color: #0b2b26;
+    }
+
+    /* highlight / info boxes */
+    .info-box {
+      background: #e7f0ed;
+      border-radius: 16px;
+      padding: 18px 24px;
+      margin-top: 16px;
+      border-left: 6px solid #2b7a6e;
+    }
+    .info-box i {
+      color: #0b2b26;
+      margin-right: 10px;
+    }
+
+    .info-box-light {
+      background: #f5f9f7;
+      border-radius: 16px;
+      padding: 18px 24px;
+      margin-top: 16px;
+      border: 1px solid #d6e2dd;
+    }
+
+    /* back link */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 16px 0 48px 0;
+      font-weight: 500;
+      color: #0b2b26;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 60px;
+      background: white;
+      border: 1px solid #d6e2dd;
+      transition: all 0.2s;
+    }
+    .back-link i {
+      color: #2b7a6e;
+    }
+    .back-link:hover {
+      background: #f0f5f3;
+      border-color: #2b7a6e;
+      transform: translateX(-4px);
+    }
+
+    /* footer */
+    .footer {
+      margin-top: 20px;
+      padding: 32px 0 24px;
+      border-top: 1px solid #e0e8e4;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      color: #3c4f49;
+    }
+    .footer .social i {
+      font-size: 22px;
+      margin-left: 18px;
+      color: #2b5f55;
+      transition: 0.2s;
+      cursor: pointer;
+    }
+    .footer .social i:hover {
+      color: #0b2b26;
+    }
+
+    /* responsive */
+    @media (max-width: 700px) {
+      .navbar {
+        flex-direction: column;
+        gap: 16px;
+        align-items: stretch;
+        text-align: center;
+      }
+      .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px 24px;
+      }
+      .nav-icons {
+        justify-content: center;
+      }
+      .privacy-header h1 {
+        font-size: 30px;
+        flex-wrap: wrap;
+      }
+      .privacy-card {
+        padding: 22px 20px;
+      }
+      .privacy-card h2 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- navbar (consistent) -->
+  <nav class="navbar">
+    <div class="logo">
+      <i class="fas fa-store-alt"></i>Vendo<span>.</span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About Us</a>
+    </div>
+    <div class="nav-icons">
+      <i class="fas fa-search"></i>
+      <i class="fas fa-heart"></i>
+      <i class="fas fa-shopping-bag"></i>
+    </div>
+  </nav>
+
+  <!-- privacy header -->
+  <div class="privacy-header">
+    <h1><i class="fas fa-shield-alt"></i> Privacy Policy</h1>
+    <p>Your privacy matters to us. This policy explains how Vendo collects, uses, and protects your personal data.</p>
+    <div class="privacy-divider"></div>
+  </div>
+
+  <!-- privacy grid -->
+  <div class="privacy-grid">
+
+    <!-- 1. Information we collect -->
+    <div class="privacy-card">
+      <h2><i class="fas fa-database"></i> 1. Information We Collect</h2>
+      <p>We collect information to provide better services and improve your experience. This includes:</p>
+      <ul>
+        <li><strong>Personal identification:</strong> Name, email address, phone number, shipping/billing address.</li>
+        <li><strong>Payment details:</strong> Credit/debit card information (processed securely by our payment partners).</li>
+        <li><strong>Account credentials:</strong> Username and password (hashed and encrypted).</li>
+        <li><strong>Usage data:</strong> Browsing history, product views, search queries, and interactions.</li>
+        <li><strong>Device & technical:</strong> IP address, browser type, operating system, and device identifiers.</li>
+      </ul>
+      <div class="info-box">
+        <i class="fas fa-lock"></i> We never store your full payment information on our servers.
+      </div>
+    </div>
+
+    <!-- 2. How we use your information -->
+    <div class="privacy-card">
+      <h2><i class="fas fa-cogs"></i> 2. How We Use Your Information</h2>
+      <p>We use your data for the following purposes:</p>
+      <ul>
+        <li><strong>Order processing:</strong> To fulfill and deliver your purchases.</li>
+        <li><strong>Account management:</strong> To maintain your profile and preferences.</li>
+        <li><strong>Customer support:</strong> To respond to inquiries and resolve issues.</li>
+        <li><strong>Personalization:</strong> To recommend products and tailor your shopping experience.</li>
+        <li><strong>Marketing:</strong> To send you promotional offers (with your consent).</li>
+        <li><strong>Improvement:</strong> To analyze trends and enhance our services.</li>
+      </ul>
+      <div class="info-box-light">
+        <i class="fas fa-envelope" style="color: #2b7a6e;"></i> You can unsubscribe from marketing emails at any time.
+      </div>
+    </div>
+
+    <!-- 3. Cookies & tracking -->
+    <div class="privacy-card">
+      <h2><i class="fas fa-cookie-bite"></i> 3. Cookies & Tracking Technologies</h2>
+      <p>We use cookies and similar technologies to improve functionality, analyze traffic, and personalize content.</p>
+      <ul>
+        <li><strong>Essential cookies:</strong> Required for basic site operations (e.g., shopping cart, login).</li>
+        <li><strong>Analytics cookies:</strong> Help us understand how visitors interact with our site (e.g., Google Analytics).</li>
+        <li><strong>Marketing cookies:</strong> Used to deliver relevant ads and measure campaign effectiveness.</li>
+        <li><strong>Preferences:</strong> Remember your language and region settings.</li>
+      </ul>
+      <p style="margin-top: 10px;">You can manage your cookie preferences through your browser settings. However, disabling certain cookies may affect site functionality.</p>
+    </div>
+
+    <!-- 4. How we share your information -->
+    <div class="privacy-card">
+      <h2><i class="fas fa-share-alt"></i> 4. How We Share Your Information</h2>
+      <p>We do not sell your personal data. We may share information with:</p>
+      <ul>
+        <li><strong>Service providers:</strong> Payment processors, shipping carriers, and IT support.</li>
+        <li><strong>Business partners:</strong> Brands and sellers who fulfill your orders.</li>
+        <li><strong>Legal compliance:</strong> When required by law or to protect our rights.</li>
+        <li><strong>Business transfers:</strong> In case of a merger, acquisition, or sale of assets.</li>
+      </ul>
+      <div class="info-box">
+        <i class="fas fa-handshake"></i> All third-party partners are contractually obligated to protect your data.
+      </div>
+    </div>
+
+    <!-- 5. Data security -->
+    <div class="privacy-card">
+      <h2><i class="fas fa-shield-virus"></i> 5. Data Security</h2>
+      <p>We implement robust security measures to safeguard your personal information:</p>
+      <ul>
+        <li><strong>Encryption:</strong> SSL/TLS encryption for data transmission.</li>
+        <li><strong>Access controls:</strong> Strict internal access policies.</li>
+        <li><strong>Regular audits:</strong> Periodic security reviews and vulnerability testing.</li>
+        <li><strong>Data minimization:</strong> We only collect what is necessary.</li>
+      </ul>
+      <p>While we strive to protect your data, no system is 100% secure. We encourage you to use strong passwords and enable two-factor authentication where available.</p>
+    </div>
+
+    <!-- 6. Your rights -->
+    <div class="privacy-card">
+      <h2><i class="fas fa-user-check"></i> 6. Your Rights & Choices</h2>
+      <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+      <ul>
+        <li><strong>Access:</strong> Request a copy of the data we hold about you.</li>
+        <li><strong>Correction:</strong> Update or correct inaccurate information.</li>
+        <li><strong>Deletion:</strong> Request erasure of your data (subject to legal obligations).</li>
+        <li><strong>Restriction:</strong> Limit how we process your data.</li>
+        <li><strong>Portability:</strong> Receive your data in a machine-readable format.</li>
+        <li><strong>Objection:</strong> Opt-out of certain processing activities (e.g., marketing).</li>
+      </ul>
+      <div class="info-box-light">
+        <i class="fas fa-envelope" style="color: #2b7a6e;"></i> To exercise your rights, contact us at <strong>privacy@vendo.com</strong>
+      </div>
+    </div>
+
+    <!-- 7. Data retention -->
+    <div class="privacy-card">
+      <h2><i class="fas fa-clock"></i> 7. Data Retention</h2>
+      <p>We retain your personal data for as long as necessary to fulfill the purposes outlined in this policy, unless a longer retention period is required by law.</p>
+      <ul>
+        <li><strong>Account data:</strong> Retained until you delete your account.</li>
+        <li><strong>Transaction history:</strong> Kept for at least 7 years for tax and accounting purposes.</li>
+        <li><strong>Marketing preferences:</strong> Retained until you unsubscribe.</li>
+      </ul>
+      <p>You may request the deletion of your account and associated data at any time.</p>
+    </div>
+
+    <!-- 8. Children's privacy -->
+    <div class="privacy-card">
+      <h2><i class="fas fa-child"></i> 8. Children's Privacy</h2>
+      <p>Vendo is not directed at children under 13 years of age. We do not knowingly collect personal information from children.</p>
+      <p>If we discover that we have inadvertently collected data from a child under 13, we will take steps to delete it promptly. Parents or guardians who believe their child has provided us with personal information should contact us.</p>
+    </div>
+
+    <!-- 9. International transfers -->
+    <div class="privacy-card">
+      <h2><i class="fas fa-globe"></i> 9. International Data Transfers</h2>
+      <p>Vendo is based in the United States. If you are accessing our services from outside the US, your data may be transferred to and processed in the US.</p>
+      <p>We take appropriate safeguards to ensure that your data is protected in accordance with this policy, including standard contractual clauses and adherence to applicable data protection laws.</p>
+    </div>
+
+    <!-- 10. Updates to this policy -->
+    <div class="privacy-card">
+      <h2><i class="fas fa-sync-alt"></i> 10. Updates to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. The latest version will always be posted on this page with the effective date.</p>
+      <p>We encourage you to review this policy periodically. Significant changes will be notified via email or through a prominent notice on our site.</p>
+      <div class="info-box">
+        <i class="fas fa-calendar-check"></i> <strong>Effective date:</strong> June 16, 2026
+      </div>
+    </div>
+
+    <!-- 11. Contact us -->
+    <div class="privacy-card">
+      <h2><i class="fas fa-headset"></i> 11. Contact Us</h2>
+      <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please reach out:</p>
+      <ul style="list-style: none; padding-left: 0; margin-top: 12px;">
+        <li style="margin-bottom: 8px;"><i class="fas fa-envelope" style="color: #2b7a6e; width: 24px;"></i> <strong>Email:</strong> privacy@vendo.com</li>
+        <li style="margin-bottom: 8px;"><i class="fas fa-phone" style="color: #2b7a6e; width: 24px;"></i> <strong>Phone:</strong> +1 (800) 555-VENDO</li>
+        <li style="margin-bottom: 8px;"><i class="fas fa-map-pin" style="color: #2b7a6e; width: 24px;"></i> <strong>Mail:</strong> Vendo Privacy Office, 123 Market St, San Francisco, CA 94103</li>
+      </ul>
+      <p style="margin-top: 10px;">We aim to respond to all inquiries within 30 days.</p>
+    </div>
+
+  </div> <!-- end privacy-grid -->
+
+  <!-- back to home -->
+  <a href="#" class="back-link"><i class="fas fa-arrow-left"></i> Back to Vendo home</a>
+
+  <!-- footer -->
+  <div class="footer">
+    <div><i class="fas fa-store-alt" style="color: #2b7a6e; margin-right: 8px;"></i> <strong>Vendo</strong> &nbsp;© 2026</div>
+    <div class="social">
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-pinterest"></i>
+      <i class="fab fa-youtube"></i>
+    </div>
+  </div>
+
+</div> <!-- /container -->
+</body>
+</html>

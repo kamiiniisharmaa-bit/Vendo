@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vendo · Terms & Conditions</title>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    body {
+      background-color: #fafaf8;
+      color: #1e1e1e;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ----- navbar (same as home) ----- */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      border-bottom: 1px solid #eaeaea;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #0b2b26;
+    }
+    .logo i {
+      color: #2b7a6e;
+      margin-right: 6px;
+    }
+    .logo span {
+      color: #2b7a6e;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      font-weight: 500;
+      color: #2d2d2d;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: inherit;
+      font-size: 16px;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover {
+      color: #2b7a6e;
+    }
+
+    .nav-icons {
+      display: flex;
+      gap: 20px;
+      font-size: 20px;
+      color: #2d2d2d;
+    }
+    .nav-icons i {
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+    .nav-icons i:hover {
+      color: #2b7a6e;
+    }
+
+    /* ----- terms hero / header ----- */
+    .terms-header {
+      margin: 48px 0 32px 0;
+    }
+    .terms-header h1 {
+      font-size: 40px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      color: #0b2b26;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .terms-header h1 i {
+      color: #2b7a6e;
+      font-size: 36px;
+    }
+    .terms-header p {
+      font-size: 18px;
+      color: #4e625b;
+      margin-top: 8px;
+      max-width: 700px;
+    }
+
+    .terms-divider {
+      width: 80px;
+      height: 4px;
+      background: #2b7a6e;
+      border-radius: 4px;
+      margin: 16px 0 24px 0;
+    }
+
+    /* ----- terms grid (cards) ----- */
+    .terms-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      margin: 24px 0 56px 0;
+    }
+
+    .term-card {
+      background: white;
+      border-radius: 24px;
+      padding: 28px 32px;
+      border: 1px solid #f0efec;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+      transition: all 0.2s;
+    }
+    .term-card:hover {
+      border-color: #d0ddd8;
+      box-shadow: 0 12px 28px -12px rgba(0, 0, 0, 0.06);
+    }
+
+    .term-card .term-icon {
+      font-size: 28px;
+      color: #2b7a6e;
+      margin-right: 14px;
+      width: 40px;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .term-card h2 {
+      font-size: 22px;
+      font-weight: 600;
+      color: #0b2b26;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .term-card h2 i {
+      color: #2b7a6e;
+      font-size: 24px;
+    }
+
+    .term-card p, .term-card li {
+      color: #3b4f48;
+      line-height: 1.7;
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    .term-card ul {
+      padding-left: 28px;
+      margin-top: 8px;
+    }
+    .term-card ul li {
+      margin-bottom: 6px;
+    }
+
+    .term-card strong {
+      color: #0b2b26;
+    }
+
+    /* highlight box */
+    .highlight-box {
+      background: #e7f0ed;
+      border-radius: 20px;
+      padding: 20px 28px;
+      margin-top: 20px;
+      border-left: 6px solid #2b7a6e;
+    }
+    .highlight-box i {
+      color: #0b2b26;
+      margin-right: 10px;
+    }
+
+    /* back link */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 16px 0 48px 0;
+      font-weight: 500;
+      color: #0b2b26;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 60px;
+      background: white;
+      border: 1px solid #d6e2dd;
+      transition: all 0.2s;
+    }
+    .back-link i {
+      color: #2b7a6e;
+    }
+    .back-link:hover {
+      background: #f0f5f3;
+      border-color: #2b7a6e;
+      transform: translateX(-4px);
+    }
+
+    /* footer (same) */
+    .footer {
+      margin-top: 20px;
+      padding: 32px 0 24px;
+      border-top: 1px solid #e0e8e4;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      color: #3c4f49;
+    }
+    .footer .social i {
+      font-size: 22px;
+      margin-left: 18px;
+      color: #2b5f55;
+      transition: 0.2s;
+      cursor: pointer;
+    }
+    .footer .social i:hover {
+      color: #0b2b26;
+    }
+
+    /* responsive */
+    @media (max-width: 700px) {
+      .navbar {
+        flex-direction: column;
+        gap: 16px;
+        align-items: stretch;
+        text-align: center;
+      }
+      .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px 24px;
+      }
+      .nav-icons {
+        justify-content: center;
+      }
+      .terms-header h1 {
+        font-size: 30px;
+        flex-wrap: wrap;
+      }
+      .term-card {
+        padding: 22px 20px;
+      }
+      .term-card h2 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- navbar (same as home for consistency) -->
+  <nav class="navbar">
+    <div class="logo">
+      <i class="fas fa-store-alt"></i>Vendo<span>.</span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About Us</a>
+    </div>
+    <div class="nav-icons">
+      <i class="fas fa-search"></i>
+      <i class="fas fa-heart"></i>
+      <i class="fas fa-shopping-bag"></i>
+    </div>
+  </nav>
+
+  <!-- terms header -->
+  <div class="terms-header">
+    <h1><i class="fas fa-file-contract"></i> Terms & Conditions</h1>
+    <p>Welcome to Vendo. Please read these terms carefully before using our platform. By continuing, you agree to our policies.</p>
+    <div class="terms-divider"></div>
+  </div>
+
+  <!-- terms grid: different sections with icons and rich content -->
+  <div class="terms-grid">
+
+    <!-- card 1: general -->
+    <div class="term-card">
+      <h2><i class="fas fa-store"></i> 1. General</h2>
+      <p>Vendo provides an online marketplace where users can browse, select, and purchase products from various sellers. These terms govern your use of the Vendo website, mobile app, and related services.</p>
+      <p><strong>Eligibility:</strong> You must be at least 18 years old or have parental consent to use our services.</p>
+    </div>
+
+    <!-- card 2: account -->
+    <div class="term-card">
+      <h2><i class="fas fa-user-circle"></i> 2. Account & Registration</h2>
+      <p>To access certain features, you may need to create an account. You are responsible for maintaining the confidentiality of your credentials.</p>
+      <ul>
+        <li><strong>Accuracy:</strong> Provide accurate, current, and complete information.</li>
+        <li><strong>Security:</strong> Notify us immediately of any unauthorized use.</li>
+        <li><strong>Termination:</strong> We reserve the right to suspend or terminate accounts that violate these terms.</li>
+      </ul>
+      <div class="highlight-box">
+        <i class="fas fa-shield-alt"></i> We protect your data with encryption and secure protocols. Read our Privacy Policy for details.
+      </div>
+    </div>
+
+    <!-- card 3: orders & payments -->
+    <div class="term-card">
+      <h2><i class="fas fa-credit-card"></i> 3. Orders & Payments</h2>
+      <p>All orders are subject to availability and confirmation. Vendo facilitates payment through trusted gateways.</p>
+      <ul>
+        <li><strong>Pricing:</strong> Prices are listed in USD and may change without notice.</li>
+        <li><strong>Taxes:</strong> Applicable taxes are calculated at checkout.</li>
+        <li><strong>Payment methods:</strong> We accept credit/debit cards, PayPal, and other digital wallets.</li>
+        <li><strong>Order confirmation:</strong> You will receive an email after placing an order.</li>
+      </ul>
+      <p><i class="fas fa-clock" style="color: #2b7a6e; margin-right: 6px;"></i> We aim to process orders within 1-2 business days.</p>
+    </div>
+
+    <!-- card 4: shipping & delivery -->
+    <div class="term-card">
+      <h2><i class="fas fa-truck"></i> 4. Shipping & Delivery</h2>
+      <p>We partner with reliable carriers to deliver your orders. Estimated delivery times are provided at checkout.</p>
+      <ul>
+        <li><strong>Domestic:</strong> 3–7 business days.</li>
+        <li><strong>International:</strong> 7–21 business days (customs may cause delays).</li>
+        <li><strong>Tracking:</strong> A tracking number will be sent once the order ships.</li>
+        <li><strong>Risk of loss:</strong> Title and risk pass to you upon delivery.</li>
+      </ul>
+      <div class="highlight-box">
+        <i class="fas fa-box-open"></i> Free shipping on orders over $75 (domestic only).
+      </div>
+    </div>
+
+    <!-- card 5: returns & refunds -->
+    <div class="term-card">
+      <h2><i class="fas fa-undo-alt"></i> 5. Returns & Refunds</h2>
+      <p>We want you to love your purchase. If you're not satisfied, you may return eligible items within 30 days of delivery.</p>
+      <ul>
+        <li><strong>Condition:</strong> Items must be unused, with original tags and packaging.</li>
+        <li><strong>Process:</strong> Initiate a return via your account or contact support.</li>
+        <li><strong>Refunds:</strong> Processed within 7–10 business days after we receive the return.</li>
+        <li><strong>Non-returnable:</strong> Perishables, custom-made items, and final sale products.</li>
+      </ul>
+      <p><i class="fas fa-envelope" style="color: #2b7a6e; margin-right: 6px;"></i> For return labels, email <strong>returns@vendo.com</strong>.</p>
+    </div>
+
+    <!-- card 6: intellectual property -->
+    <div class="term-card">
+      <h2><i class="fas fa-copyright"></i> 6. Intellectual Property</h2>
+      <p>All content on Vendo – including text, graphics, logos, images, and software – is the property of Vendo or its licensors.</p>
+      <ul>
+        <li><strong>Trademarks:</strong> The Vendo name and logo are registered trademarks.</li>
+        <li><strong>Use:</strong> You may not reproduce, distribute, or create derivative works without our express permission.</li>
+        <li><strong>User content:</strong> By posting reviews or photos, you grant us a non-exclusive, royalty-free license to use them.</li>
+      </ul>
+    </div>
+
+    <!-- card 7: prohibited activities -->
+    <div class="term-card">
+      <h2><i class="fas fa-ban"></i> 7. Prohibited Activities</h2>
+      <p>You agree not to:</p>
+      <ul>
+        <li>Use the site for any unlawful purpose.</li>
+        <li>Attempt to gain unauthorized access to our systems.</li>
+        <li>Transmit viruses, malware, or any harmful code.</li>
+        <li>Harass, abuse, or harm others through our platform.</li>
+        <li>Resell or exploit any part of the service without authorization.</li>
+      </ul>
+      <div class="highlight-box">
+        <i class="fas fa-exclamation-triangle"></i> Violations may result in immediate account suspension.
+      </div>
+    </div>
+
+    <!-- card 8: disclaimers & liability -->
+    <div class="term-card">
+      <h2><i class="fas fa-gavel"></i> 8. Disclaimers & Liability</h2>
+      <p>Vendo provides the platform “as is” and “as available.” We do not warrant that the service will be uninterrupted or error-free.</p>
+      <ul>
+        <li><strong>Product information:</strong> We strive for accuracy but do not guarantee that product descriptions, images, or prices are error-free.</li>
+        <li><strong>Third-party links:</strong> We are not responsible for external websites or content.</li>
+        <li><strong>Limitation:</strong> To the fullest extent permitted by law, Vendo’s liability is limited to the amount you paid for the applicable order.</li>
+      </ul>
+      <p><i class="fas fa-balance-scale" style="color: #2b7a6e;"></i> Some jurisdictions do not allow the exclusion of certain warranties, so this may not apply to you.</p>
+    </div>
+
+    <!-- card 9: governing law -->
+    <div class="term-card">
+      <h2><i class="fas fa-globe-americas"></i> 9. Governing Law</h2>
+      <p>These terms are governed by and construed in accordance with the laws of the State of California, without regard to its conflict of law principles.</p>
+      <p>Any disputes arising from these terms or your use of Vendo shall be resolved exclusively in the state or federal courts located in San Francisco, CA.</p>
+    </div>
+
+    <!-- card 10: changes to terms -->
+    <div class="term-card">
+      <h2><i class="fas fa-pen-fancy"></i> 10. Changes to Terms</h2>
+      <p>We may update these terms from time to time. The “Last Updated” date at the bottom of this page indicates the latest revision.</p>
+      <p>We encourage you to review this page periodically. Your continued use of Vendo after changes constitutes acceptance of the new terms.</p>
+      <p style="margin-top: 12px;"><i class="fas fa-calendar-alt" style="color: #2b7a6e;"></i> <strong>Last updated:</strong> June 16, 2026</p>
+    </div>
+
+  </div> <!-- end terms-grid -->
+
+  <!-- back to home link -->
+  <a href="#" class="back-link"><i class="fas fa-arrow-left"></i> Back to Vendo home</a>
+
+  <!-- footer -->
+  <div class="footer">
+    <div><i class="fas fa-store-alt" style="color: #2b7a6e; margin-right: 8px;"></i> <strong>Vendo</strong> &nbsp;© 2026</div>
+    <div class="social">
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-pinterest"></i>
+      <i class="fab fa-youtube"></i>
+    </div>
+  </div>
+
+</div> <!-- /container -->
+</body>
+</html>
